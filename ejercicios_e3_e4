@@ -1,0 +1,86 @@
+const universidad = {
+  nombre: "Universidad Central",
+  ubicacion: {
+    ciudad: "Sevilla",
+    direccion: {
+      calle: "Av. Principal",
+      numero: 123
+    }
+  },
+  facultades: [
+    {
+      nombre: "Ingeniería",
+      carreras: [
+        {
+          nombre: "Informática",
+          estudiantes: [
+            { nombre: "Laura", edad: 20, hobbies: ["programar", "ajedrez"] },
+            { nombre: "Javier", edad: 22, hobbies: ["fútbol", "cine"] }
+          ]
+        },
+        {
+          nombre: "Civil",
+          estudiantes: [
+            { nombre: "Sofía", edad: 21, hobbies: ["fotografía", "leer"] }
+          ]
+        }
+      ]
+    },
+    {
+      nombre: "Derecho",
+      carreras: [
+        {
+          nombre: "Derecho Penal",
+          estudiantes: [
+            { nombre: "Andrés", edad: 23, hobbies: ["debate", "natación"] }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+
+
+
+const mostrarNombreUniversidad = (uni) => {
+  console.log("Nombre de la universidad:", uni.nombre);
+};
+
+const mostrarCalle = (uni) => {
+  console.log("Calle:", uni.ubicacion.direccion.calle);
+};
+
+const mostrarPrimeraFacultad = (uni) => {
+  console.log("Primera facultad:", uni.facultades[0].nombre);
+};
+
+const mostrarSegundaCarreraPrimeraFacultad = (uni) => {
+  console.log("Segunda carrera en la primera facultad:", uni.facultades[0].carreras[1].nombre);
+};
+
+const mostrarPrimerEstudianteInformatica = (uni) => {
+  console.log("Primer estudiante de Informática:", uni.facultades[0].carreras[0].estudiantes[0].nombre);
+};
+
+const mostrarSegundoHobbyLaura = (uni) => {
+  console.log("Segundo hobby de Laura:", uni.facultades[0].carreras[0].estudiantes[0].hobbies[1]);
+};
+
+const mostrarEdadSofia = (uni) => {
+  console.log("Edad de Sofía:", uni.facultades[0].carreras[1].estudiantes[0].edad);
+};
+
+const mostrarPrimerHobbyDerechoPenal = (uni) => {
+  console.log("Primer hobby del estudiante de Derecho Penal:", uni.facultades[1].carreras[0].estudiantes[0].hobbies[0]);
+};
+
+
+mostrarNombreUniversidad(universidad);
+mostrarCalle(universidad);
+mostrarPrimeraFacultad(universidad);
+mostrarSegundaCarreraPrimeraFacultad(universidad);
+mostrarPrimerEstudianteInformatica(universidad);
+mostrarSegundoHobbyLaura(universidad);
+mostrarEdadSofia(universidad);
+mostrarPrimerHobbyDerechoPenal(universidad);
